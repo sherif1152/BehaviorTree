@@ -1,0 +1,11 @@
+<root BTCPP_format="4">
+  <BehaviorTree ID="MainTree">
+    <Fallback name="root_fallback">
+      <CheckBattery name="check_battery"/>
+      <OpenGripper name="open_gripper"/>
+      <CheckObjectLocation name="check_object_location"/>
+      <ApproachObject name="approach_object"/>
+      <CloseGripper name="close_gripper"/>
+    </Fallback>
+  </BehaviorTree>
+</root>

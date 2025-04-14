@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.10)
+project(custom_bt)
+
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(simple_seq_bt)
+
+find_package(behaviortree_cpp REQUIRED)
+include_directories(${behaviortree_cpp_INCLUDE_DIRS})
+
+find_package(spdlog REQUIRED)
+
+add_executable(main_bt main.cpp )
+
+target_link_libraries(main_bt PRIVATE behaviortree_cpp::behaviortree_cpp spdlog::spdlog)
+
